@@ -7,7 +7,7 @@ def get():
     conn = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     host = socket.gethostbyname('http://httpbin.org')
 
-
+    print('hello')
     conn.sendall('GET / HTTP/1.0\r\nHost: http://httpbin.org \r\n')
 
 parser = argparse.ArgumentParser()
