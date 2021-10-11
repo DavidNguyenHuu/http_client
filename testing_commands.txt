@@ -1,0 +1,42 @@
+------------------------------------
+#USED TO TEST GET
+------------------------------------
+#Get no extras
+#python httpc.py get 'http://httpbin.org/get?course=networking&assignment=1'
+
+#Get with HEADER
+#python httpc.py get -h Content-Type:text/html 'http://httpbin.org/get?course=networking&assignment=1'
+#python httpc.py get -h Content-Typetext/html 'http://httpbin.org/get?course=networking&assignment=1'
+
+#Get with VERBOSE
+#python httpc.py get -v 'http://httpbin.org/get?course=networking&assignment=1'
+
+#Get with Overwrite w/ Verbose
+#python httpc.py get -v 'http://httpbin.org/get?course=networking&assignment=1' -o helloworld.txt
+
+#Get with Overwrite w/o Verbose
+#python httpc.py get 'http://httpbin.org/get?course=networking&assignment=1' -o helloworld.txt
+
+
+------------------------------------
+#USED TO TEST POST
+------------------------------------
+
+#python httpc.py post 'http://httpbin.org/post'
+#python httpc.py post 'https://httpbin.org/post' -h 'accept:application/json'
+#python httpc.py post 'https://httpbin.org/post'
+
+#WITH -Header AND -Data
+
+#Lab instruction example
+#python httpc.py post -h Content-Type:application/json -d '{"Assignment": 1}' http://httpbin.org/post
+#python httpc.py post -h Content-Type:application/json -f input_test.txt http://httpbin.org/post
+
+
+#-d and -f
+#python httpc.py post 'http://httpbin.org/get?course=networking&assignment=1' -d a -f b
+
+# post + -f
+# python httpc.py post 'http://httpbin.org/post' -f input_test.txt -h 'Content-Type: application/json'
+
+# python httpc.py post 'http://httpbin.org/post' -v

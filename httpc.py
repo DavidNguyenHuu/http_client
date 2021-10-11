@@ -1,8 +1,6 @@
 import argparse
 import help as h
 import http_lib
-import sys
-
 
 
 parser = argparse.ArgumentParser(add_help=False)
